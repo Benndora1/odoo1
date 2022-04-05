@@ -5,20 +5,20 @@
     <field name="name"></field>
     <field name="model">incident.report</field>
     <field name="arch" type="xml">
-      <form>
+      <form string="Incident Report"> 
         <sheet>
-          <group>
+          <group string="Incident Report Template">
             <field name="name"/>
             <field name="signature"/>
             <field name="date"/>
           </group>
-          <group>
+          <group string="Incident">
             <field name="date_time"/>
             <field name="victim"/>
             <field name="description"/>
             <field name="witness"/>
           </group>
-          <group>
+          <group string="Report of the incidentto club/association">
             <field name="reported_to"/>
             <field name="how"/>
             <field name="actions"/>
