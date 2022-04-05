@@ -5,7 +5,7 @@
 <field name="name">Incident Report</field>
 <field name="type">ir.actions.act_window</field>
 <field name="res_model">incident.report</field>
-<field name="view_mode">form, kanban, tree</field>
+<field name="view_mode">form,tree</field>
 <field name="help" type="html">
 <p>
 <strong>Incident Report</strong>
@@ -21,8 +21,8 @@
 <menuitem id="incedent_report_root_safety_health"
           name="Instance Reporting"
           sequence="1"
+          action="incident_action"
           parent="incedent_report_root"
-          actions="incident_action"
           />
   
 
