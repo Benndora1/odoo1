@@ -26,7 +26,8 @@ class IncidentReport(models.Model):
 
     name = fields.Text("Name and Role of the person completing this form:")
     signature = fields.Char("Signature of person completing this form:")
-    date = fields.Datetime()
+    date = fields.Datetime("Date:")
+    date_time = fields.Datetime("Date and Time:")
     victim = fields.Char("Name/s of person/s involved in the incident and their clubs/associations:")
     description = fields.Text("Description od the incidence")
     witness = fields.Text("Witness(include contacts")

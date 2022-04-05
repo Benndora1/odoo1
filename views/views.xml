@@ -1,31 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<record id="incident_action" model="ir.actions.act_window">
-<field name="name">Incident Report</field>
-<field name="type">ir.actions.act_window</field>
-<field name="res_model">incident.report</field>
-<field name="view_mode">form,tree</field>
-<field name="help" type="html">
-<p>
-<strong>Incident Report</strong>
-</p>
-</field>
-</record>
+  <record id="incedent_form" model="ir.ui.view">
+    <field name="name"></field>
+    <field name="model">incident.report</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="signature"/>
+            <field name="date"/>
+          </group>
+          <group>
+            <field name="date_time"/>
+            <field name="victim"/>
+            <field name="description"/>
+            <field name="witness"/>
+          </group>
+          <group>
+            <field name="reported_to"/>
+            <field name="how"/>
+            <field name="actions"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="incident_action" model="ir.actions.act_window">
+    <field name="name">Incident Report</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">incident.report</field>
+    <field name="view_mode">form,tree</field>
+    <field name="help" type="html">
+      <p>
+        <strong>Incident Report</strong>
+      </p>
+    </field>
+  </record>
 
 
+  <menuitem id="incedent_report_root" name="Safety Health and Report" sequence="1" />
 
-
-<menuitem id="incedent_report_root" name="Safety Health and Report" sequence="1"/>
-    
-<menuitem id="incedent_report_root_safety_health"
-          name="Instance Reporting"
-          sequence="1"
-          action="incident_action"
-          parent="incedent_report_root"
-          />
-  
-
+  <menuitem id="incedent_report_root_safety_health" name="Instance Reporting" sequence="1" action="incident_action" parent="incedent_report_root" />
 
 
 </odoo>
