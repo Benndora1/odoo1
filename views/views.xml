@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<menuitem id="incedent_report_root"
-          name="Safety Health and Report"
-          sequence="1"/>
+
+<record id="incident_action" model="ir.actions.act_window">
+<field name="name">Incident Report</field>
+<field name="type">ir.actions.act_window</field>
+<field name="res_model">incident.report</field>
+<field name="view_mode">form, kanban, tree</field>
+<field name="help" type="html">
+<p>
+<strong>Incident Report</strong>
+</p>
+</field>
+</record>
+
+
+
+
+<menuitem id="incedent_report_root" name="Safety Health and Report" sequence="1"/>
     
 <menuitem id="incedent_report_root_safety_health"
           name="Instance Reporting"
           sequence="1"
-          parent="incedent_report_root"/>
+          parent="incedent_report_root"
+          actions="incident_action"
+          />
   
 
 
